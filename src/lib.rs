@@ -449,6 +449,7 @@ pub fn metadata() -> FnResult<Json<PluginMetadata>> {
             },
         ],
         resources: vec![entra_app_resource()],
+        ..Default::default()
     }))
 }
 
@@ -700,6 +701,7 @@ mod tests {
             labels: HashMap::new(),
             plugin_outputs: HashMap::new(),
             provisioned_resources: HashMap::new(),
+            ..Default::default()
         }
     }
 
@@ -713,6 +715,7 @@ mod tests {
             labels: HashMap::new(),
             plugin_outputs: HashMap::new(),
             provisioned_resources: provisioned,
+            ..Default::default()
         }
     }
 
